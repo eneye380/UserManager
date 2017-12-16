@@ -1,7 +1,12 @@
 FROM node:carbon
 
+MAINTAINER Abdulmumin Abdulkarim <abdulmumineabdulkarim@gmail.com>
+
 # Create app directory
 WORKDIR /usr/src/app
+
+# Create .env file and copies .env-sample into it
+ADD .env-sample .env
 
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
@@ -14,6 +19,7 @@ RUN npm install
 
 # Bundle app source
 COPY . .
+
 
 EXPOSE 3000
 CMD [ "npm", "start" ]
