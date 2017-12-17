@@ -6,7 +6,7 @@ MAINTAINER Abdulmumin Abdulkarim <abdulmumineabdulkarim@gmail.com>
 WORKDIR /usr/src/app
 
 # Create .env file and copies .env-sample into it
-ADD .env-sample .env
+#ADD .env-sample .env
 
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
